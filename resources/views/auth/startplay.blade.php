@@ -13,7 +13,7 @@
             <!-- <div class="border-btn">
                 <span> PLEASE REGISTER TO PROCEED</span>
             </div> -->
-            <button class="glow-on-hover mt2" type="button"><a href="{{ env('SITE_URL').'/quiz' }}">Play</a></button>
+            <button class="glow-on-hover mt2" type="button"><a class="play" href="{{ env('SITE_URL').'/quiz' }}">Play</a></button>
             
             </div>
            

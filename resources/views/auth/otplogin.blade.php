@@ -23,8 +23,8 @@
                 <!-- <input type="text" value="OTP" class="disable"/> -->
                 <!-- <small>Forgot password?</small> -->
                 <button class="primary">Generate OTP</button>
-                <button class="default"><img src="{{ asset('images/GoogleIcon.svg') }}">  Or, sign-in with Google</button>
-                <small class="text-center">Not a member yet?  <a href="{{ env('SITE_URL').'/register' }}"><i>Register</i></a></small>
+                <!-- <button class="default"><img src="{{ asset('images/GoogleIcon.svg') }}">  Or, sign-in with Google</button>
+                <small class="text-center">Not a member yet?  <a href="{{ env('SITE_URL').'/register' }}"><i>Register</i></a></small> -->
 
             </div>
         </form>

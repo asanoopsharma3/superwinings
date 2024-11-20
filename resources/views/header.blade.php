@@ -24,6 +24,9 @@
            
         </ul>
     </div>
-    <div class="cart"><a><img src="{{ asset('images/cart.svg') }}"></a></div>
+    @if (!empty(auth()->id()) && isset($correctAnswerCount))
+    <div class="cart"><h2>Quiz Summary</h2>
+    <p>Correct Answers: {{ !empty($correctAnswerCount) ? $correctAnswerCount : 0 }}</p></div>
+     @endif
 </header>
     
