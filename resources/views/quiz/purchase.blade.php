@@ -4,6 +4,19 @@
 <main>
     <div class="container">
     @include('header')
+    <div class="plan-info">
+        <div>
+        
+        <img src="{{ asset('images/plan.svg') }}">
+    </div>
+    <div>
+        <h3>IT’S GREAT <br>
+            TO HAVE </h3>
+           <h3 class="gri-text"> YOU! </h3>
+            <p>Please select the play  pack to
+                proceed</p>
+            </div>
+     </div>
     <div class="row">
         @foreach($plans as $key=>$plan)
         @php
