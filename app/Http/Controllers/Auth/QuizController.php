@@ -66,7 +66,8 @@ class QuizController extends Controller
     public function showPurchasePlan()
     {
         $plans = \App\Models\Plan::all();
-        return view('quiz.purchase', compact('plans'));
+        $planImagesArr = [0=>'Rectangle 8.svg',1=>'Rectangle 9.svg',2=>'Rectangle7.svg']; 
+        return view('quiz.purchase', compact('plans','planImagesArr'));
     }
 
     public function purchasePlan($planId)
@@ -92,5 +93,14 @@ class QuizController extends Controller
     {
         // Logic to display results
         return view('quiz.plans');
+    }
+
+    public function buySubcription(){
+        $correctAnswer = QuizAttempt::where('user_id',auth()->id())->get();
+        $correctAnswerCount = 0;
+        if(!empty($correctAnswer) && count($correctAnswer) > 0){
+            $correctAnswerCount = $correctAnswer[0]->correct_answers;
+        }
+        return view('quiz.subscription',compact('correctAnswerCount'));
     }
 }

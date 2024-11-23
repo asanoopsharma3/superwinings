@@ -52,6 +52,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/quiz/answer', [QuizController::class, 'answerQuestion'])->name('quiz.answer');
     Route::get('/purchase-plan', [QuizController::class, 'showPurchasePlan'])->name('quiz.purchasePlan');
     Route::post('/quiz/purchase-plan/{planId}', [QuizController::class, 'purchasePlan'])->name('quiz.purchasePlan.purchase');
+    Route::get('subscription-done', [QuizController::class, 'buySubcription'])->name('subscription-done');
+
     Route::get('/play', function () {
         return view('auth.startplay');
     });
