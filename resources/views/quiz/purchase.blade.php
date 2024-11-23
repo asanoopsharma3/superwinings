@@ -1,11 +1,9 @@
 @include('head')
 </head>
-<body>
+<body class="plan-banner">
 <main>
     <div class="container">
     @include('header')
-        
-    </div>
     <div class="row">
         @foreach($plans as $key=>$plan)
         @php
@@ -18,6 +16,7 @@
         </div>
         @endforeach
      </div>
+    </div>
 </main>
 <script>
         function selectPlan(planId){

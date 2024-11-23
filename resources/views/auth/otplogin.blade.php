@@ -1,13 +1,6 @@
 @include('head')
 <main>
     <div class="container">
-    <style>
-        .error {
-            color: red;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-    </style>
     @include('header')
         <div class="banner">
         @if (session('error'))

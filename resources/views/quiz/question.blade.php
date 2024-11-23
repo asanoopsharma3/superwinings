@@ -23,7 +23,7 @@
                     <li><label for="input-ID{{ $option->id }}" class="radio-label"><input type="radio" class="quiz-radio" id="input-ID{{ $option->id }}" name="option_id" value="{{ $option->id }}" required>{{ $option->option_text }}</label></li>
                 @endforeach
             </ul>
-            <button type="button" onclick="submitAnswer()" class="glow-on-hover">Submit Answer</button>
+            <button type="button" onclick="submitAnswer()" class="glow-on-hover mt2">NEXT</button>
            </form>
             </ul>
 
