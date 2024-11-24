@@ -36,7 +36,7 @@
             const routeUrl = "<?php echo env('SITE_URL').'/subscription-done' ; ?>";
             setTimeout(() => {
                 window.location.href = routeUrl;
-            }, 2000);
+            }, 5000);
         }
 </script>
 @include('footer')

@@ -25,12 +25,16 @@ class QuizController extends Controller
 
         $correctAnswer = QuizAttempt::where('user_id',auth()->id())->get();
         $correctAnswerCount = 0;
-        if(!empty($correctAnswer) && count($correctAnswer) > 0){
-            $correctAnswerCount = $correctAnswer[0]->correct_answers;
+        if(!empty($correctAnswer)){
+            if(!empty($correctAnswer) && count($correctAnswer) > 0){
+                $correctAnswerCount = $correctAnswer[0]->correct_answers;
+            }
         }
+        
         $question = Question::with('options')->skip((int) $questionNumber - 1)->first();
+
         if (!$question) {
-            return redirect()->route('quiz.results');
+            return redirect()->route('quiz.purchasePlan');
         }
 
         return view('quiz.question', compact('question', 'questionNumber', 'correctAnswerCount'));
@@ -40,18 +44,21 @@ class QuizController extends Controller
     {
         $request->validate([
             'question_id' => 'required|exists:questions,id',
-            'option_id' => 'required|exists:options,id'
+            //'option_id' => 'required|exists:options,id'
         ]);
 
-        
-        $option = Options::find($request->option_id);
-        $isCorrect = $option->is_correct;
+        if (empty($request->option_id)) {
+            return redirect()->route('quiz.show', ['questionNumber' => (int) $request->questionNumber + 1]);
+        }
         // $isCorrect = $userAnswer === $correctAnswer;    
         UserAnswer::create([
             'user_id' => auth()->id(),
             'question_id' => $request->question_id,
             'option_id' => $request->option_id
         ]);
+
+        $option = Options::find($request->option_id);
+        $isCorrect = $option->is_correct;
 
         if ($isCorrect) {
             $quizAttempt = QuizAttempt::firstOrCreate(

@@ -20,8 +20,11 @@
             <li><a>Products</a></li>
             <li><a>features</a></li>
             <li><a>Support</a></li>
+            @if (empty(auth()->id()))
             <li><a href="{{ env('SITE_URL').'/otp/login' }}">login</a></li>
-           
+            @else
+            <li><a href="{{ env('SITE_URL').'/logout' }}">logout</a></li>
+            @endif
         </ul>
     </div>
     @if (!empty(auth()->id()) && isset($correctAnswerCount))

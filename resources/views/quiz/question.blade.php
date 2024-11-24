@@ -5,11 +5,11 @@
         @include('header')
         <div class="question-box">
         <div class="wrap">
-            <div class="count">{{ $questionNumber }}</div>
+            <div class="count" id="timer"><span id="time-left">15</span></div>
             <div class="border">
             <div class="question gradient-border">
             <div>
-                {{ $question->question_text }}
+            {{ $questionNumber }}. {{ $question->question_text }}
             </div>
             </div>
             </div>
@@ -84,6 +84,39 @@
         }
 
         document.addEventListener("DOMContentLoaded", function() {
+          let timerDuration = 15; // Time in seconds
+            const timerDisplay = document.getElementById('time-left');
+            const quizForm = document.getElementById('quizForm');
+
+            // Countdown function
+            function startTimer() {
+                const countdown = setInterval(() => {
+                    timerDuration--;
+                    timerDisplay.textContent = timerDuration;
+
+                    if (timerDuration === 5) {
+                        timerDisplay.style.color = 'red'; // Change timer text to red
+                    }
+                    // Check if time is up
+                    if (timerDuration <= 0) {
+                        clearInterval(countdown);
+                        removeRequiredAndSubmit();
+                    }
+                }, 1000);
+            }
+
+ 
+            // Auto-submit function
+            function removeRequiredAndSubmit() {
+            // Remove the `required` attribute from checkboxes or any input
+            const requiredInputs = quizForm.querySelectorAll('[required]');
+            requiredInputs.forEach(input => input.removeAttribute('required'));
+
+            alert('Time is up! Submitting the quiz.');
+            quizForm.submit(); // Automatically submit the form
+          }
+            // Start the timer when the page loads
+            startTimer();
             @if(session('isCorrect') !== null)
                 // Display feedback based on the answer correctness
                 const answerFeedback = "{{ session('isCorrect') ? 'Hurray ! That’s the right answer ' : 'Sorry ! That’s the wrong answer' }}";

@@ -7,6 +7,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Auth\AuthOtpController;
 use App\Http\Controllers\Auth\QuizController;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
 
 use \App\Http\Middleware\CheckQuestionLimit;
 
@@ -46,6 +47,11 @@ Route::controller(App\Http\Controllers\Auth\AuthOtpController::class)->group(fun
 
 
 });
+
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/otp/login')->with('status', 'Logged out successfully!');
+})->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/quiz/{questionNumber?}', [QuizController::class, 'showQuestion'])->name('quiz.show')->middleware(CheckQuestionLimit::class);;
