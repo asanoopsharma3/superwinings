@@ -33,7 +33,7 @@
             mobile_no: {
                 required: true,
                 digits:true,
-                minlength:10,
+                minlength:8,
                 maxlength:10
                 
             }
@@ -42,7 +42,7 @@
             mobile_no: {
                 required: "Please enter mobile no",
                 digits: "Please enter only numbers",
-                minlength: "Your name must consist of at least 10 number",
+                minlength: "Your name must consist of at least 8 number",
                 maxlength:"Invalid mobile number, must be 10 digits"
             }
         },
