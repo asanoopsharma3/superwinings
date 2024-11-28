@@ -742,7 +742,7 @@ body {
 
     .sec-2 {
         background: #fff;
-        height: 100vh;
+        height: 100% !important;
         width: 100%;
     }
 
@@ -933,7 +933,7 @@ body {
 
     .sec-2 {
         background: #fff;
-        height: 100vh;
+        height: 100% !important;
         width: 100%;
     }
 
