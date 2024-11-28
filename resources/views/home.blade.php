@@ -6,7 +6,7 @@
         <div class="banner">
             <div>
             <h3><span>explore</span></h3>
-            <h3>the new world</h3>
+            <h3>the new world of</h3>
             <h1>SUPERWINNINGS!!</h1>
             <!-- <div class="border-btn">
                 <span> PLEASE REGISTER TO PROCEED</span>
