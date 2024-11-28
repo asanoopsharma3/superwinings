@@ -5,7 +5,7 @@
         @include('header')
         <div class="question-box">
         <div class="wrap">
-            <div class="count" ><span >15</span></div>
+        <div class="count" id="timer"><span id="time-left">15</span></div>
             <div class="border">
             <div class="question gradient-border">
             <div>

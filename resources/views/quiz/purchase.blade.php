@@ -32,7 +32,7 @@
                 </li>
                 <li>24/7 Network Monitoring</li>
                </ul>
-               <div class="btn">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+               <div class="btn" onclick="selectPlan(1);">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
            </div>
            <div class="col-md-4 sliver">
             <img src="<?php echo asset('images/crystal.webp') ?>">
@@ -47,7 +47,7 @@
              </li>
              <li>24/7 Network Monitoring</li>
             </ul>
-            <div class="btn">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+            <div class="btn" onclick="selectPlan(2);">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
         </div>
         <div class="col-md-4 premium">
             <img src="<?php echo asset('images/diamond-svgrepo-com.svg') ?>">
@@ -62,7 +62,7 @@
              </li>
              <li>24/7 Network Monitoring</li>
             </ul>
-            <div class="btn">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+            <div class="btn" onclick="selectPlan(3);">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
         </div>
         </div>
     </div>
