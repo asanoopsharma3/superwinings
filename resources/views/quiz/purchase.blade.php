@@ -21,48 +21,34 @@
         <div class="row Products-option">
            <div class="col-md-4 basic">
                <img src="<?php echo asset('images/basic.png') ?>">
-               <h3>Basic Plan</h3>
-               <h1>$9.9/ month</h1>
+               <h3>Daily Plan</h3>
+               <h1>1 SZL/ Daily</h1>
               
                <h3>Featured Included:</h3>
                <ul>
-                <li>24/7 Network Monitoring</li>
-                <li>Helpdesk Support (Limited Hours)</li>
-                <li>Basic Cybersecurity Protection
-                </li>
-                <li>24/7 Network Monitoring</li>
+                <li>Get a chance to win Bumper prize of 100 k SZL and smartphones  by participating in Weekly  Quiz</li>
                </ul>
-               <div class="btn" onclick="selectPlan(1);">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+               <div class="btn" onclick="selectPlan(1);">CLICK<i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
            </div>
            <div class="col-md-4 sliver">
             <img src="<?php echo asset('images/crystal.webp') ?>">
-            <h3>Sliver Plan</h3>
-            <h1>$9.9/ month</h1>
-            
+            <h3>Weekly Plan</h3>
+            <h1>3 SZL / Weekly</h1>
             <h3>Featured Included:</h3>
             <ul>
-             <li>24/7 Network Monitoring</li>
-             <li>Helpdesk Support (Limited Hours)</li>
-             <li>Basic Cybersecurity Protection
-             </li>
-             <li>24/7 Network Monitoring</li>
+             <li>Get a chance to win Bumper prize of 100 k SZL and smartphones  by participating in Weekly  Quiz</li>
             </ul>
-            <div class="btn" onclick="selectPlan(2);">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+            <div class="btn" onclick="selectPlan(2);">CLICK<i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
         </div>
         <div class="col-md-4 premium">
             <img src="<?php echo asset('images/diamond-svgrepo-com.svg') ?>">
-            <h3>Premium Plan</h3>
-            <h1>$9.9/ month</h1>
-           
+            <h3>Monthly Plan</h3>
+            <h1>15 SZL/ month</h1>
             <h3>Featured Included:</h3>
             <ul>
-             <li>24/7 Network Monitoring</li>
-             <li>Helpdesk Support (Limited Hours)</li>
-             <li>Basic Cybersecurity Protection
-             </li>
-             <li>24/7 Network Monitoring</li>
+             <li>Get a chance to win Bumper prize of 100 k SZL and Smart TV  by participating in Monthly  Quiz</li>
             </ul>
-            <div class="btn" onclick="selectPlan(3);">Buy Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+            <div class="btn" onclick="selectPlan(3);">CLICk<i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
         </div>
         </div>
     </div>
