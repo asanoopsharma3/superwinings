@@ -15,7 +15,13 @@
     $(".toggler").click(function(){
        $('.mobNav').toggle("show");
     });
+    
 });
+
+document.querySelectorAll('.menu.mobNav').forEach(element => {
+        element.style.display = 'none';
+    });
+
 </script>
 </head>
 <body>
