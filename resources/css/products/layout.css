@@ -819,9 +819,9 @@ body {
             content: '\f00d';
           } */
         header {
-            padding: 1rem 0px;
+            padding: 0px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             position: relative;
 
             ul {
