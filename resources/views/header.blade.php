@@ -28,7 +28,7 @@
         </ul>
     </div>
     @if (!empty(auth()->id()) && isset($correctAnswerCount))
-    <div class="cart"><h2>Quiz Summary</h2>
+    <div class="cart"><h2>Score</h2>
     <p>Correct Answers: {{ !empty($correctAnswerCount) ? $correctAnswerCount : 0 }}</p></div>
      @endif
 </header>
